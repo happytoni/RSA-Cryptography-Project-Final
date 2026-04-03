@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RSA Crypto Project</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
+        .container { max-width: 600px; margin: auto; border: 1px solid #ccc; padding: 20px; border-radius: 8px; }
+        input, textarea { width: 100%; margin-bottom: 10px; }
+        button { background: #007bff; color: white; border: none; padding: 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>RSA Encryption & Digital Signature</h2>
+        
+        <label>Step 1: Keys (Use small primes for testing)</label>
+        <input type="number" id="p" placeholder="Prime p">
+        <input type="number" id="q" placeholder="Prime q">
+        
+        <label>Message to Encrypt/Sign:</label>
+        <textarea id="message" rows="3"></textarea>
+        
+        <button onclick="processRSA()">Run RSA Protocol</button>
+        
+        <h3>Results:</h3>
+        <p><strong>Public Key (n, e):</strong> <span id="pubKey"></span></p>
+        <p><strong>Ciphertext (Encrypted):</strong> <span id="cipher"></span></p>
+        <p><strong>Decrypted Message:</strong> <span id="decrypted"></span></p>
+        <p><strong>Digital Signature (signed with d):</strong> <span id="signature"></span></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
